@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test_01.testcontoroller">
+  <children>
+    <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="70.0" text="タイトル" textAlignment="JUSTIFY" visible="true" />
+    <Button id="AppEnd" fx:id="AppButton" layoutX="475.0" layoutY="426.0" mnemonicParsing="false" onAction="#onAppButtonClicked" prefHeight="31.0" prefWidth="111.0" text="終了" />
+    <Button fx:id="ReadButton" layoutX="109.0" layoutY="205.0" mnemonicParsing="false" onAction="#onReadButtonClicked" prefHeight="31.0" prefWidth="84.0" text="検索" />
+    <TableView fx:id="T_Table" layoutX="14.0" layoutY="245.0" prefHeight="170.0" prefWidth="572.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="タイトル" fx:id="C_Title" />
+        <TableColumn prefWidth="75.0" text="著者" fx:id="C_Author" />
+        <TableColumn prefWidth="75.0" text="出版社" fx:id="C_Publisher" />
+        <TableColumn prefWidth="75.0" text="開始期間" fx:id="C_StartPeriod" />
+        <TableColumn prefWidth="75.0" text="終了期間" fx:id="C_EndPeriod" />
+        <TableColumn prefWidth="75.0" text="メモ" fx:id="C_Memo" />
+        <TableColumn prefWidth="75.0" text="登録日" fx:id="C_InsertDate" />
+      </columns>
+    </TableView>
+    <ComboBox id="S_Nen" fx:id="S_Year" depthTest="INHERIT" layoutX="100.0" layoutY="106.0" prefWidth="147.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextField fx:id="T_Title" layoutX="100.0" layoutY="20.0" prefWidth="288.0" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="45.0" prefHeight="21.0" prefWidth="70.0" text="著者" textAlignment="JUSTIFY">
+      <effect>
+        <Lighting>
+          <bumpInput>
+            <Shadow />
+          </bumpInput>
+          <light>
+            <javafx.scene.effect.Light.Distant />
+          </light>
+        </Lighting>
+      </effect>
+    </Label>
+    <TextField fx:id="T_Author" layoutX="100.0" layoutY="46.0" prefWidth="288.0" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="76.0" prefHeight="21.0" prefWidth="70.0" text="出版社" textAlignment="JUSTIFY" />
+    <TextField fx:id="T_Publisher" layoutX="100.0" layoutY="77.0" prefWidth="288.0" />
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="106.0" prefHeight="20.0" prefWidth="70.0" text="開始期間" textAlignment="JUSTIFY" />
+    <Label alignment="CENTER" layoutX="260.0" layoutY="106.0" prefHeight="20.0" prefWidth="17.0" text="/" />
+    <ComboBox id="S_" fx:id="S_Month" layoutX="287.0" layoutY="106.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" layoutX="381.0" layoutY="106.0" prefHeight="20.0" prefWidth="17.0" text="/" />
+    <ComboBox fx:id="S_Day" layoutX="411.0" layoutY="106.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="132.0" prefHeight="20.0" prefWidth="70.0" text="終了期間" textAlignment="JUSTIFY" />
+    <ComboBox id="S_Nen" fx:id="E_Year" depthTest="INHERIT" layoutX="100.0" layoutY="132.0" prefWidth="147.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" layoutX="260.0" layoutY="132.0" prefHeight="20.0" prefWidth="17.0" text="/" />
+    <ComboBox id="S_" fx:id="E_Month" layoutX="287.0" layoutY="132.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" layoutX="381.0" layoutY="132.0" prefHeight="20.0" prefWidth="17.0" text="/" />
+    <ComboBox id="S_Day" fx:id="E_Day" layoutX="411.0" layoutY="132.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="アイテム1" />
+          <String fx:value="アイテム2" />
+          <String fx:value="アイテム3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="158.0" prefHeight="20.0" prefWidth="70.0" text="メモ" textAlignment="JUSTIFY" />
+    <TextField fx:id="T_Memo" layoutX="100.0" layoutY="158.0" prefWidth="288.0" />
+    <Button id="ReadButton" fx:id="InsertButton" layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#onInsertButtonClicked" prefHeight="31.0" prefWidth="84.0" text="登録" />
+  </children>
+</AnchorPane>

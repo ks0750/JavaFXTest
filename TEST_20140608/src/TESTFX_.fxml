@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="test_01.testcontoroller">
+  <children>
+    <Button id="AppEnd" fx:id="AppButton" layoutX="475.0" layoutY="426.0" mnemonicParsing="false" onAction="#onAppButtonClicked" prefHeight="31.0" prefWidth="111.0" text="終了" />
+    <HBox layoutX="14.0" layoutY="14.0" prefHeight="123.0" prefWidth="572.0">
+      <children>
+        <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="84.0" text="タイトル" textAlignment="JUSTIFY" visible="true" />
+      </children>
+    </HBox>
+    <TableView fx:id="T_Table" prefHeight="200.0" prefWidth="572.0" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="149.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="タイトル" fx:id="C_Title" />
+        <TableColumn prefWidth="75.0" text="著者" fx:id="C_Author" />
+        <TableColumn prefWidth="75.0" text="出版社" fx:id="C_Publisher" />
+        <TableColumn prefWidth="75.0" text="開始期間" fx:id="C_StartPeriod" />
+        <TableColumn prefWidth="75.0" text="終了期間" fx:id="C_EndPeriod" />
+        <TableColumn prefWidth="75.0" text="メモ" fx:id="C_Memo" />
+        <TableColumn prefWidth="75.0" text="登録日付" fx:id="C_InsertDate" />
+      </columns>
+    </TableView>
+    <Button fx:id="ReadButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#onReadButtononClicked" prefHeight="31.0" prefWidth="84.0" text="Button" />
+  </children>
+</AnchorPane>
